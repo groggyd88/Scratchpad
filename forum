@@ -1,0 +1,473 @@
+Now that 1.10 has been out for a couple of months, it's a good time to take stock of what [acronym=User-Made Content]UMC[/acronym] remains to be ported. I've drawn up a list of (single-player) campaigns that have not yet been ported. And my attachment includes HTML files that list all unported add-ons of every type (as of early October), with all the standard details (descriptions, downloads, uploads, dates, etc.), and some extras.
+
+Note that this only purports to be a list of [i]unported[/i], not necessarily [i]abandoned[/i], campaigns. 1.8 developers in particular may still straggle in with their own ports (as in my own case). As always, please try to contact the original author (or last maintainer) before starting a port.
+
+Now, some of these add-ons have not been ported because they never got very far along. So I've included some metrics of author progress.
+
+[list][*][b]An estimated count of scenario files.[/b] (It is based on the number of files with the [/scenario] closing tag in the add-on, with some filters to cut out backup and duplicative files.) While it does not show whether an author completed his campaign, it may indicate how much effort the author invested in it. (Be aware that this is not intended to measure the number of scenarios actually played, as there may be branching or looping storylines, nor does this distinguish between battles and cutscenes.)
+
+[*][b]The number of uploads recorded by the server.[/b] Many uploads could indicate an active developer. However, this is a very rough metric, as it favors "release early, release often" designers. Others like to finish their cathedrals first, or not use players as alpha testers. Also, it only shows uploads for that Wesnoth version, so it is misleading when it comes to campaigns that originated on an earlier Wesnoth release.
+
+[*][b]Any releases for prior Wesnoth versions.[/b] Not only does this alert you that the upload count is misleading, porting a campaign through multiple versions is an indicator of persistent effort. (But it could also mean that the author will eventually port it on his own!)[/list]
+
+Of course, some of these add-ons have not been ported because they are, well, not that good, but I'm not going to venture opinions on quality.
+
+[b]EDIT:[/b] Entries have been crossed out to reflect new ports up to [b]early October[/b]. My attachment has also been updated.
+[b]EDIT:[/b] I now include some era and faction add-ons that include sample campaigns.
+[b]EDIT:[/b] I've refactored and expanded the section on the accuracy of this list.
+[b]EDIT:[/b] Added Restoration (with archive.org link) and Survival to 1.0 section.
+
+[section="Unported 1.8 Campaigns"][s]Aldur_The_Great[/s] ported
+[s]Alfhelm the Wise[/s] ported
+[url=http://files.wesnoth.org/addons/1.8/A_New_Heir.tar.bz2]A New Heir[/url] [indent]LightFighter[/indent] [indent]sc:11[/indent] [indent]up:1[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Attack_on_Elves.tar.bz2]Attack on Elves[/url] [indent]zepko[/indent] [indent]sc:20[/indent] [indent]up:5[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Adventures_of_Knighthood.tar.bz2]Aventures of Knighthood[/url] [indent]Pewskeepski[/indent] [indent]sc:13[/indent] [indent]up:10[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Battle_Against_Time.tar.bz2]Battle Against Time[/url] [indent]Wonderboy[/indent] [indent]sc:5[/indent] [indent]up:2[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Between_the_Worlds.tar.bz2]Between the Worlds[/url] [indent]Mark Metson[/indent] [indent]sc:55[/indent] [indent]up:171[/indent] [indent]1.6, 1.4[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Bitter_Revenge.tar.bz2]Bitter Revenge[/url] [indent]Wonderboy[/indent] [indent]sc:15[/indent] [indent]up:3[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Bob_the_Dwarf.tar.bz2]Bob the Dwarf[/url] [indent]Me[/indent] [indent]sc:1[/indent] [indent]up:1[/indent] [indent]really a misclassified scenario[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Brent.tar.bz2]Brent[/url] [indent]melinath[/indent] [indent]sc:8[/indent] [indent]up:6[/indent] [indent]1.6 (removed)[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Danse_Macabre.tar.bz2]Danse Macabre[/url] [indent]WURI (kamikaze)[/indent] [indent]sc:19[/indent] [indent]up:9[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Dark_Tale.tar.bz2]Dark Tale[/url] [indent]janenho13[/indent] [indent]sc:5[/indent] [indent]up:4[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Era_of_the_Future.tar.bz2]Era of the Future[/url] [indent]Various[/indent] [indent]sc:5[/indent] [indent]up:5[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Ucieczka_z_Podziemi.tar.bz2]Escape from the Underground[/url] [indent]Adris[/indent] [indent]sc:4[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Expanding_Wesnoth.tar.bz2]Expanding Wesnoth[/url] [indent]Scotti Anderson[/indent] [indent]sc:10[/indent] [indent]up:8[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Flight_Freedom.tar.bz2]Flight to Freedom[/url] [indent]MadMax, Nova[/indent] [indent]sc:26[/indent] [indent]up:1[/indent] [indent]1.6, 1.5, 1.4, 1.2, 1.0[/indent]
+[s]Forward They Cried[/s] ported by Lord Knightmare
+[url=http://files.wesnoth.org/addons/1.8/How_to_Become_a_Hero.tar.bz2]How to Become a Hero[/url] [indent]Elmor[/indent] [indent]sc:13[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Invasion_of_the_North.tar.bz2]Invasion of the North[/url] [indent]libertyernie[/indent] [indent]sc:7[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Journey_to_the_East.tar.bz2]Journey to the East[/url] [indent]lipk[/indent] [indent]sc:8[/indent] [indent]up:7[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Lords_of_the_North.tar.bz2]Lords of the North[/url] [indent]styles1005[/indent] [indent]sc:1[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Martian_Invasion_1594.tar.bz2]Martian Invasion[/url] [indent]Mark Metson[/indent] [indent]sc:4[/indent] [indent]up:31[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Memoirs_of_a_Thief.tar.bz2]Memoirs_of_a_Thief[/url] [indent]Frenzik[/indent] [indent]sc:9[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Merman_Tellius_and_the_Island_of_Doom.tar.bz2]Merman Tellius and the Island of Doom[/url] [indent]Daniel Chan[/indent] [indent]sc:1[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Minimalist_Era.tar.bz2]Minimalist Era[/url] [indent]TheDreamer[/indent] [indent]sc:6[/indent] [indent]up:8[/indent]
+[url=http://files.wesnoth.org/addons/1.8/MAP.tar.bz2]Modifiable Android Project[/url] [indent]SpoOkyMagician[/indent] [indent]sc:2[/indent] [indent]up:9[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Mordok_the_Magnificent.tar.bz2]Mordok the Magnificent[/url] [indent]bempo[/indent] [indent]sc:9[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Mutiny_in_1626.tar.bz2]Mutiny in 1626[/url] [indent]Mark Metson[/indent] [indent]sc:9[/indent] [indent]up:116[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Mystery_in_1596.tar.bz2]Mystery in 1596[/url] [indent]Mark Metson[/indent] [indent]sc:3[/indent] [indent]up:15[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Our_Longest_Year.tar.bz2]Our Longest Year[/url] [indent]Luke the Flaming[/indent] [indent]sc:14[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Party_to_Die_For.tar.bz2]Party to Die For[/url] [indent]TheDoctorMouse[/indent] [indent]sc:2[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Promised_Land.tar.bz2]Promised Land[/url] [indent]elvish_sovereign[/indent] [indent]sc:6[/indent] [indent]up:9[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Prudence.tar.bz2]Prudence[/url] [indent]Josh Roby (porting: Groggy Dice)[/indent] [indent]sc:8[/indent] [indent]up:9[/indent] [indent]1.6[/indent] [indent]I have already run it through wmllint, but I believe it also needs rebalancing[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Rebellion_During_the_Dark_Age.tar.bz2]Rebellion During the Dark Age[/url] [indent]Huston[/indent] [indent]sc:12[/indent] [indent]up:1[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Rhugastans_Bridge.tar.bz2]Rhugastan's Bridge[/url] [indent]Terakay[/indent] [indent]sc:8[/indent] [indent]up:5[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Rock_out.tar.bz2]Rock out![/url] [indent]Xer/Unnheulu[/indent] [indent]sc:2[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Ruthless.tar.bz2]Ruthless[/url] [indent]homunculus[/indent] [indent]sc:21[/indent] [indent]up:8[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Seven_Stones_and_Eleven.tar.bz2]Seven Stones--and Eleven[/url] [indent]Efinari[/indent] [indent]sc:7[/indent] [indent]up:1[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/MoN.tar.bz2]Shadow Lord[/url] [indent]Kapou'e II[/indent] [indent]sc:3[/indent] [indent]up:6[/indent] [indent]1.9 (removed)[/indent] [indent]a porting attempt to 1.9 has been pulled from the server[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Swamp_Escape.tar.bz2]Swamp Escape[/url] [indent]WarMole & Arc-en-ciel[/indent] [indent]sc:1[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Talentless_Mage.tar.bz2]Talentless Mage[/url] [indent]Wonderboy[/indent] [indent]sc:15[/indent] [indent]up:5[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Foolish_Hero.tar.bz2]The adventures of Sir Dendrian: The Foolish Hero[/url] [indent]Boldek[/indent] [indent]sc:25[/indent] [indent]up:24[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Cost_Of_Living.tar.bz2]The Cost Of Living[/url] [indent]blob[/indent] [indent]sc:7[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Dark_Alliance.tar.bz2]The Dark Alliance[/url] [indent]Wonderboy[/indent] [indent]sc:25[/indent] [indent]up:4[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Eight_Of_Cembulad.tar.bz2]The Eight Of Cembulad[/url] [indent]Lintana~ & WYRMY (porting: Groggy Dice)[/indent] [indent]sc:27[/indent] [indent]up:3[/indent] [indent]1.4[/indent] [indent]I will upgrade this eventually[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Final_Exam.tar.bz2]The Final Exam[/url] [indent]S. Hoferek (Elven), Elvish_Hunter (updater for 1.8)[/indent] [indent]sc:3[/indent] [indent]up:2[/indent] [indent]1.6, 1.4[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Founding_of_Alduin_Isle.tar.bz2]The Founding of Alduin Isle[/url] [indent]Stormerdave, with help for A_Simple_Campaign and reading others campaign wmls[/indent] [indent]sc:4[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Grassbloom.tar.bz2]The Grassbllom Liberation[/url] [indent]matser_gonf[/indent] [indent]sc:11[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_History_of_Burin.tar.bz2]The History of Burin[/url] [indent]Maciej Piechotka[/indent] [indent]sc:8[/indent] [indent]up:1[/indent] [indent]1.6, 1.4[/indent] [indent]misclassified as a scenario[/indent]
+[url=http://files.wesnoth.org/addons/1.8/North_Wind.tar.bz2]The North Wind[/url] [indent]Deusite, aelius[/indent] [indent]sc:2[/indent] [indent]up:2[/indent] [indent]1.0[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Portals.tar.bz2]The Portals[/url] [indent]The_Black_Sword[/indent] [indent]sc:6[/indent] [indent]up:6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Rise_of_Camdar.tar.bz2]The Rise of Camdar[/url] [indent]Vladcara, Aura[/indent] [indent]sc:12[/indent] [indent]up:6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/La_guardia_septentrional.tar.bz2]The septentrional tower[/url] [indent]Perseo[/indent] [indent]sc:12[/indent] [indent]up:10[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Traitor.tar.bz2]The Traitor: Ressurection[/url] [indent]artisticdude[/indent] [indent]sc:19[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/The_Unstoppable_Legion_Extras.tar.bz2]The Unstoppable Legion Extras Resource Pack[/url] [indent]hart02[/indent] [indent]sc:27[/indent] [indent]up:2[/indent] [indent]1.4[/indent]
+[s]the Unstoppable Legion[/s] ported (only partially?)
+[url=http://files.wesnoth.org/addons/1.8/The_War_of_Terrador.tar.bz2]The War of Terrador[/url] [indent]Dragonchampion[/indent] [indent]sc:21[/indent] [indent]up:7[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Undead_Incursion.tar.bz2]Undead Incursion[/url] [indent]Kapou'e II[/indent] [indent]sc:12[/indent] [indent]up:19[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Vix.tar.bz2]Vix- Second Edition[/url] [indent]artisticdude[/indent] [indent]sc:2[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.8/WC_Khalifate.tar.bz2]World Conquest Kalifas[/url] [indent]Natasiel[/indent] [indent]sc:1[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.8/WC_NM.tar.bz2]World Conquest[/url] [indent]Natasiel[/indent] [indent]sc:1[/indent] [indent]up:9[/indent] [indent]1.6[/indent]
+[url=http://files.wesnoth.org/addons/1.8/Written_In_Blood.tar.bz2]Written in Blood[/url] [indent]LightFighter[/indent] [indent]sc:10[/indent] [indent]up:12[/indent][/section]
+[section="Unported 1.6 Campaigns"][url=http://files.wesnoth.org/addons/1.6/Assassin_in_the_Forest.tar.bz2]Assassin in the Forest[/url] [indent]Ken Oh, Exasperation,Elvish Pillager[/indent] [indent]sc:1[/indent] [indent]up:2[/indent] [indent]1.0[/indent]
+[url=http://files.wesnoth.org/addons/1.6/A_Tale_of_Life_and_Death.tar.bz2]A Tale of Life and Death[/url] [indent]Tathis (P. D)[/indent] [indent]sc:6[/indent] [indent]up:5[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Autumn_Kingdoms_Prologue.tar.bz2]Autumn Kingdoms - Prologue[/url] [indent]Devrailis Colandore[/indent] [indent]sc:12[/indent] [indent]up:15[/indent] [indent]1.4[/indent] [indent]active porting effort is underway http://forums.wesnoth.org/viewtopic.php?f=8&t=25171&start=30#p535129; first scenario has a wmliterator-crashing bug; remove or change all instances of "<<" http://forums.wesnoth.org/viewtopic.php?f=4&t=36651[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Broken_Valley.tar.bz2]Broken Valley[/url] [indent]Zen Clark[/indent] [indent]sc:11[/indent] [indent]up:17[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Missing_Scepter.tar.bz2]Case of the Missing Scepter[/url] [indent]TofuOgre[/indent] [indent]sc:37[/indent] [indent]up:16[/indent] [indent]1.7 (removed)[/indent] [indent]"Missing_Scepter from v1.6 add-on server is ready to be uploaded, to v1.9 add-on server. I have ported it successfully, now am play-testing it, to check for run-time bugs." Sep 2011 http://forums.wesnoth.org/viewtopic.php?f=8&t=17171start=180#p506474[/indent]
+[url=http://files.wesnoth.org/addons/1.6/COTS.tar.bz2]Coming of the Storm[/url] [indent]TrashMan[/indent] [indent]sc:26[/indent] [indent]up:5[/indent] [indent]1.5[/indent] [indent]"Thanks...expect to see a new release soonish .. " Sep 2010 "V%#$! Can't get the changes to work. " Oct 2010 http://forums.wesnoth.org/viewtopic.php?f=8&t=23361start=210#p459644[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Crystal_of_Sight.tar.bz2]Crystal of Sight[/url] [indent]Eolith[/indent] [indent]sc:17[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Fiery_Menace.tar.bz2]Fiery Menace[/url] [indent]Derekkk[/indent] [indent]sc:2[/indent] [indent]up:2[/indent] [indent]1.5[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Gambits_EMPIRE_Builder.tar.bz2]GambitsEMPIREBuilder[/url] [indent]Gambit[/indent] [indent]sc:2[/indent] [indent]up:4[/indent] [indent]1.8 (removed), 1.4, 1.2[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Invasion_of_Arendia.tar.bz2]Invasion of Arendia[/url] [indent]Ranger M (maintained by Kaddo)[/indent] [indent]sc:17[/indent] [indent]up:4[/indent] [indent]1.5, 1.2, 1.0[/indent] [indent]last two scenarios are placeholders, but have a wmllint-crashing bug http://forums.wesnoth.org/viewtopic.php?f=4&t=36651[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Pakunoth.tar.bz2]Pakunoth[/url] [indent]mich[/indent] [indent]sc:4[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Resurection_of_Wesnoth.tar.bz2]Resurection of Wesnoth[/url] [indent]archlich[/indent] [indent]sc:7[/indent] [indent]up:5[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Sceptre_of_Life.tar.bz2]Sceptre of Life[/url] [indent]Nathanael D Schmolze (opensourcejunkie@gmail.com)[/indent] [indent]sc:14[/indent] [indent]up:13[/indent] [indent]1.5, 1.4[/indent] [indent]Original author returning to work! Jul 2012 http://forums.wesnoth.org/viewtopic.php?f=21&t=37137 [s]"I'm trying to get the code updated for 1.8.x in case he comes back or somebody else eventually gets the rights to finish it or whatever, but there's been no input from OSJ." Jun 2011 http://forums.wesnoth.org/viewtopic.php?f=8&t=21640start=255#p494383[/s][/indent]
+[url=http://files.wesnoth.org/addons/1.6/Siege_of_Soradoc.tar.bz2]Siege of Soradoc[/url] [indent]CountPenguin[/indent] [indent]sc:3[/indent] [indent]up:4[/indent] [indent]"I am continuing on from where CountPenguin left off " Jan 2010 http://forums.wesnoth.org/viewtopic.php?f=8&t=24977#p401201 "I( am currently working on polishing the previous missions and I am waiting for units and art to be finished. Then I will start with the 4th mission "The River" I have a map and some basic code." Apr 2010 http://forums.wesnoth.org/viewtopic.php?f=8&t=24977p=420198[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Struggle_For_Freedom.tar.bz2]Struggle For Freedom[/url] [indent]WYRMY[/indent] [indent]sc:12[/indent] [indent]up:1[/indent] [indent]1.4[/indent]
+[url=http://files.wesnoth.org/addons/1.6/The_Fall_of_Wesnoth.tar.bz2]The Fall of Wesnoth[/url] [indent]Huston, Great Rings[/indent] [indent]sc:6[/indent] [indent]up:16[/indent] [indent]1.7 (removed)[/indent] [indent]apparently not the same as the 1.9 campaign; sequel to Rebellion in the Dark Age[/indent]
+[url=http://files.wesnoth.org/addons/1.6/The_Necromancers_Cavern.tar.bz2]The Necromancer's Cavern[/url] [indent]Colin345[/indent] [indent]sc:1[/indent] [indent]up:8[/indent]
+[url=http://files.wesnoth.org/addons/1.6/The_nothern_expedition.tar.bz2]The nothern expedition[/url] [indent]janus[/indent] [indent]sc:19[/indent] [indent]up:13[/indent] [indent]1.4, 1.2, 1.0[/indent]
+[url=http://files.wesnoth.org/addons/1.6/The_Stormblade.tar.bz2]The Stormblade[/url] [indent]elvish_sovereign[/indent] [indent]sc:12[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Trials_of_Tyco.tar.bz2]Trials of Tyco[/url] [indent]Shrike[/indent] [indent]sc:11[/indent] [indent]up:5[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Untold_Tale_Darkened_Skies.tar.bz2]Untold Tale: Darkened Skies[/url] [indent]smchronos[/indent] [indent]sc:3[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.6/Warda_Hidden_Threat.tar.bz2]Warda: A Hidden Threat[/url] [indent]Jorrit Tyberghein[/indent] [indent]sc:5[/indent] [indent]up:4[/indent]
+[url=http://files.wesnoth.org/addons/1.6/War_of_the_Dragon.tar.bz2]War of the Dragon[/url] [indent]Velensk[/indent] [indent]sc:14[/indent] [indent]up:7[/indent] [indent]1.4[/indent] [indent](abortive?) port to 1.10 at UMC-Dev[/indent]
+[url=http://files.wesnoth.org/addons/1.6/War_of_the_West.tar.bz2]War of the West[/url] [indent]Aloisius Hingerl[/indent] [indent]sc:4[/indent] [indent]up:4[/indent]
+[url=http://files.wesnoth.org/addons/1.6/When_Came_out_the_Shadows.tar.bz2]When Came out the Shadows[/url] [indent]domingo[/indent] [indent]sc:27[/indent] [indent]up:2[/indent] [indent]1.4[/indent][/section]
+[section="Unported 1.5 Campaigns"][url=http://files.wesnoth.org/addons/1.5/Fools_Errand.tar.bz2]Fool's Errand[/url] [indent]Orcish Shyde[/indent] [indent]sc:6[/indent] [indent]up:4[/indent] [indent]1.4[/indent]
+[url=http://files.wesnoth.org/addons/1.5/Of_Memories_Past.tar.bz2]Of Memories Past[/url] [indent]telmo[/indent] [indent]sc:20[/indent] [indent]up:6[/indent][/section]
+[section="Unported 1.4 Campaigns"][url=http://files.wesnoth.org/addons/1.4/A_Sortie.tar.bz2]A Sortie[/url] [indent]Marbro[/indent] [indent]sc:12[/indent] [indent]up:20[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Attack_of_the_Undead.tar.bz2]Attack of the Undead[/url] [indent]wsultzbach[/indent] [indent]sc:5[/indent] [indent]up:6[/indent] [indent]1.2[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Battle_for_SMND.tar.bz2]Battle for SMND[/url] [indent]Viliam Bur[/indent] [indent]sc:1[/indent] [indent]up:2[/indent] [indent]has MP mode[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Capturing_Mar_Than.tar.bz2]Capturing Mar'Than[/url] [indent]sjl[/indent] [indent]sc:11[/indent] [indent]up:5[/indent] [indent]1.2[/indent] [indent]"I finished playing all the scenarios yesterday, and will play the campaign one more time before pushing it up to the addon server." Nov 2011 http://forums.wesnoth.org/viewtopic.php?f=8&t=17171start=195#p512742[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Death_is_a_Circle.tar.bz2]Death is a Circle[/url] [indent]orcish_orc,y0urb0ss[/indent] [indent]sc:6[/indent] [indent]up:11[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Desert_War.tar.bz2]Desert War[/url] [indent]Woodmouse[/indent] [indent]sc:7[/indent] [indent]up:6[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Elvish_Legacy.tar.bz2]Elvish Legacy[/url] [indent]Longbow[/indent] [indent]sc:8[/indent] [indent]up:6[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Fargoths_Bow.tar.bz2][Fargoth's Bow][/url] [indent][Nyimen][/indent] [indent]sc:2[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Forty_Years_Exile.tar.bz2]Forty Years Exile[/url] [indent]Eolith[/indent] [indent]sc:9[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.4/From_Darkness_to_Light.tar.bz2]From Darkness to Light[/url] [indent]Eolith, with help from Turuk, dontano, and Mirion147[/indent] [indent]sc:13[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Guardian_Order.tar.bz2]Guardian Order[/url] [indent]Octavius/xbrianll[/indent] [indent]sc:2[/indent] [indent]up:1[/indent] [indent]1.7 (removed)[/indent] [indent]attempted port to 1.7 claimed to have 4 scenarios[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Hallowed_Glade.tar.bz2]Hallowed Glade[/url] [indent]Javascribe[/indent] [indent]sc:6[/indent] [indent]up:1[/indent]
+[s]Invasion of Eliador[/s] ported by trewe
+[url=http://files.wesnoth.org/addons/1.4/Knight_Quest.tar.bz2]Knights_Quest[/url] [indent]Lordemeraldhide[/indent] [indent]sc:1[/indent] [indent]up:15[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Metamorphoses.tar.bz2]Metamorphoses[/url] [indent]More autors[/indent] [indent]sc:1[/indent] [indent]up:4[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Necromancer.tar.bz2]Necromancer[/url] [indent]Orcish Shyde[/indent] [indent]sc:14[/indent] [indent]up:26[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Northern_Cross.tar.bz2]Northern Cross[/url] [indent]Glowing Fish[/indent] [indent]sc:3[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.4/On_Crimson_Wings.tar.bz2]On Crimson Wings[/url] [indent]Cheradenine[/indent] [indent]sc:6[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Raajal.tar.bz2]Raajal[/url] [indent]Genosuke[/indent] [indent]sc:55[/indent] [indent]up:60[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Random_Invasion.tar.bz2]Random invasion[/url] [indent]Noyga[/indent] [indent]sc:2[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Solo_Tower_Defence.tar.bz2]Solo Tower Defence[/url] [indent]spookymagician[/indent] [indent]sc:1[/indent] [indent]up:1[/indent] [indent]1.6 (removed)[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Tarlyn.tar.bz2]Stories of Tarlyn[/url] [indent]AI[/indent] [indent]sc:10[/indent] [indent]up:5[/indent]
+[url=http://files.wesnoth.org/addons/1.4/The_Conquest_of_a_Dark_Queen.tar.bz2]The Conquest of a Dark Queen[/url] [indent]Mica&Turuk[/indent] [indent]sc:12[/indent] [indent]up:3[/indent] [indent]abortive port to 1.6 at UMC-Dev[/indent]
+[url=http://files.wesnoth.org/addons/1.4/The_First_Of_The_Dragonriders.tar.bz2]The first of the Dragonriders[/url] [indent]galicae[/indent] [indent]sc:10[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Forgotten_Legacy.tar.bz2]The Forgotten Legacy[/url] [indent]Db0[/indent] [indent]sc:5[/indent] [indent]up:21[/indent] [indent]1.1 (wolff), 1.0[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Griffoon_Lads.tar.bz2]The Griffoon Lads[/url] [indent]Gotrek860[/indent] [indent]sc:16[/indent] [indent]up:19[/indent]
+[url=http://files.wesnoth.org/addons/1.4/The_Heist.tar.bz2]The Heist[/url] [indent]Genosuke[/indent] [indent]sc:17[/indent] [indent]up:6[/indent] [indent]1.1 (wolff), 1.0[/indent] [indent]porting effort on github[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Rebirth_of_Magic.tar.bz2]The Rebirth of Magic[/url] [indent]Armageddon[/indent] [indent]sc:3[/indent] [indent]up:15[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Trolls.tar.bz2]Trolls![/url] [indent]Jequ[/indent] [indent]sc:4[/indent] [indent]up:7[/indent]
+[url=http://files.wesnoth.org/addons/1.4/Winds_of_Foerroen.tar.bz2]Winds of Foerroen[/url] [indent]SaintCredence[/indent] [indent]sc:3[/indent] [indent]up:1[/indent][/section]
+[section="Unported 1.2 Campaigns"][url=http://files.wesnoth.org/addons/1.2/A_Princes_Tale.tar.bz2]A Princes Tale[/url] [indent]waw[/indent] [indent]sc:10[/indent] [indent]up:4[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Civil_Warfare.tar.bz2]Civil Warfare[/url] [indent]No Author[/indent] [indent]sc:3[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Cursed_land.tar.bz2]Cursed Land[/url] [indent]John L[/indent] [indent]sc:3[/indent] [indent]up:4[/indent] [indent]1.3 (wolff)[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Dragon_Brothers.tar.bz2]Dragon Brothers[/url] [indent]LOTRcampaigns[/indent] [indent]sc:8[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Eternal_Kingdom.tar.bz2]Eternal Kingdom[/url] [indent]Martenzo[/indent] [indent]sc:5[/indent] [indent]up:1[/indent] [indent]1.0 (wolff)[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Green_Isle.tar.bz2]Green Isle Chapters 1 & 2[/url] [indent]gabe[/indent] [indent]sc:17[/indent] [indent]up:48[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Human_campaign.tar.bz2]Human_campaign[/url] [indent]LezzerLord[/indent] [indent]sc:6[/indent] [indent]up:5[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Battleone.tar.bz2]La Bataille[/url] [indent]Gavial[/indent] [indent]sc:3[/indent] [indent]up:17[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Legacy.tar.bz2]Legacy[/url] [indent]Casual User[/indent] [indent]sc:9[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Lizard_Conquest.tar.bz2]Lizard Conquest[/url] [indent]LOTRcampaigns[/indent] [indent]sc:6[/indent] [indent]up:8[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Adventure_of_Soul_Keeper.tar.bz2]Malhulyor's Adventure[/url] [indent]herlaziness[/indent] [indent]sc:2[/indent] [indent]up:6[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Master_Lich.tar.bz2]Master Lich[/url] [indent]No Author[/indent] [indent]sc:1[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Lodissea_dei_nereidi.tar.bz2]Merman's Odyssey[/url] [indent]Darkest[/indent] [indent]sc:9[/indent] [indent]up:3[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Moved_Graves.tar.bz2]Moved Graves[/url] [indent]DEATH[/indent] [indent]sc:3[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Phoenix_Kingdom.tar.bz2]Phoenix_Kingdom[/url] [indent]Sabata[/indent] [indent]sc:3[/indent] [indent]up:1[/indent] [indent]1.3 (wolff)[/indent] [indent]archive.org indicates a lost port to 1.3[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Saboteur_and_Savior.tar.bz2]Saboteur and Savior[/url] [indent]Savagust[/indent] [indent]sc:41[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Saga_of_the_Clans.tar.bz2]Saga of the Clans[/url] [indent]Flametrooper[/indent] [indent]sc:2[/indent] [indent]up:unknown[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Scout.tar.bz2]Scout[/url] [indent]toms[/indent] [indent]sc:9[/indent] [indent]up:6[/indent] [indent]1.0[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Spacenoth_Demo.tar.bz2]Spacenoth Demo[/url] [indent]various[/indent] [indent]sc:5[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.2/The_Barliss.tar.bz2]The Barliss[/url] [indent]hagow[/indent] [indent]sc:10[/indent] [indent]up:unknown[/indent]
+[url=http://files.wesnoth.org/addons/1.2/The_Endless_War.tar.bz2]The Endless War[/url] [indent]Ken Oh[/indent] [indent]sc:6[/indent] [indent]up:21[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Mage_Republic.tar.bz2]The Mage Republic[/url] [indent]Tashi[/indent] [indent]sc:9[/indent] [indent]up:6[/indent] [indent]1.0[/indent]
+[url=http://files.wesnoth.org/addons/1.2/The_Mage_University.tar.bz2]The Mage University[/url] [indent]Firemaster[/indent] [indent]sc:5[/indent] [indent]up:2[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Town_vs_Gown.tar.bz2]Town vs Gown (camp)[/url] [indent]tw[/indent] [indent]sc:4[/indent] [indent]up:6[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Volcano_Island.tar.bz2]Volcano Island[/url] [indent]Skizzaltix[/indent] [indent]sc:7[/indent] [indent]up:1[/indent] [indent]1.3 (wolff)[/indent] [indent]archive.org indicates a lost port to 1.3[/indent]
+[s]Warmaster Campaign[/s] ported by trewe
+[url=http://files.wesnoth.org/addons/1.2/War-Torn.tar.bz2]War-Torn[/url] [indent]Elvish Hexagon[/indent] [indent]sc:8[/indent] [indent]up:1[/indent]
+[url=http://files.wesnoth.org/addons/1.2/Wesvoid.tar.bz2]Wesvoid[/url] [indent]Snarius (current maintainer), Invisible Philosopher(previous maintainer), Elvish Pillager(original author), Prometheus(helper mage)[/indent] [indent]sc:10[/indent] [indent]up:3[/indent] [indent]1.0[/indent]
+[url=http://files.wesnoth.org/addons/1.2/AngelsFearToTread.tar.bz2]WhereAngelsFeartoTread[/url] [indent]BlackOpsElf[/indent] [indent]sc:5[/indent] [indent]up:4[/indent][/section]
+[section="Unported 1.0 Campaigns"][url=http://files.wesnoth.org/addons/1.0/3_Tests.tar.bz2]3 Tests of an Undead Man[/url] [indent]Nikita[/indent] [indent]sc:4[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Dark_Elves.tar.bz2]A New Threat[/url] [indent]Assasin&amp;Nikita[/indent] [indent]sc:11[/indent] [indent]up:N/A[/indent] [indent]porting efforts by mori, Assasin, and myself can be found on the forum http://forums.wesnoth.org/viewtopic.php?f=8&t=8000&start=375[/indent]
+[url=http://files.wesnoth.org/addons/1.0/A_Seed_of_Evil.tar.bz2]A Seed of Evil[/url] [indent]Disto[/indent] [indent]sc:16[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Castles_and_Knights.tar.bz2]Castles and Knights[/url] [indent][?][/indent] [indent]sc:18[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/revenge.tar.bz2]Elf War II: Revenge[/url] [indent]Mkgego[/indent] [indent]sc:8[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Glory.tar.bz2]Glory[/url] [indent]JNisse[/indent] [indent]sc:17[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Heiress_To_The_Throne.tar.bz2]Heiress to the Throne[/url] [indent]Rusty steals from HTTT[/indent] [indent]sc:29[/indent] [indent]up:N/A[/indent] [indent]1.1 (wolff)[/indent] [indent]archive.org indicates a lost port to 1.1[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Halloween.tar.bz2]Holidays in Wesnoth[/url] [indent]Assorted[/indent] [indent]sc:3[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Illusion_Campaign.tar.bz2]Ilayin the Illusionist[/url] [indent]Elvish Pillager with help from Invisible Philosopher[/indent] [indent]sc:6[/indent] [indent]up:N/A[/indent] [indent]1.3 (wolff)[/indent] [indent]archive.org indicates a lost port to 1.3[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Mermens_Plight.tar.bz2]Mermen's Plight[/url] [indent]Gregor Richards (GregorR)[/indent] [indent]sc:8[/indent] [indent]up:N/A[/indent]
+[url=http://web.archive.org/web/20060213005259/http://wolff.to/campaigns/Restoration.tgz]Restoration[/url] [indent]taz[/indent] [indent]sc:17[/indent] [indent]up:N/A[/indent] [indent]complete campaign but not on Wesnoth's server; link to working archive.org crawl (two others got error pages instead); "The campaign has been temporarily deleted fm the server until IÃ¢â‚¬â„¢m able to upload it again." Jun 2006 http://forums.wesnoth.org/viewtopic.php?f=8&t=8726&start=45 "Help pls ! Cannot upload a campaign." Aug 2006 http://forums.wesnoth.org/viewtopic.php?f=8&t=12449[/indent]
+[url=http://files.wesnoth.org/addons/1.0/survival.tar.bz2]Survival[/url] [indent]Casual User[/indent] [indent]sc:11[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/The_Avenger.tar.bz2]The Avenger[/url] [indent][?][/indent] [indent]sc:1[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Fatal_Five_Strike_Back.tar.bz2]The Fatal Five[/url] [indent][?][/indent] [indent]sc:2[/indent] [indent]up:N/A[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Unrest.tar.bz2]Unrest in Elfland[/url] [indent]Elvish Pillager with help from Invisible Philosopher[/indent] [indent]sc:4[/indent] [indent]up:N/A[/indent] [indent]abortive port to /trunk at UMC-Dev[/indent]
+[url=http://files.wesnoth.org/addons/1.0/Wesnoth_Holdem.tar.bz2]Wesnoth Hold'em[/url] [indent]Genosuke[/indent] [indent]sc:4[/indent] [indent]up:N/A[/indent] [indent]1.1 (wolff)[/indent] [indent]archive.org indicates a lost port to 1.1[/indent][/section]
+
+[section="How accurate and complete is this list?"]Well, [b]first[/b], my list only covers add-ons [i]currently on the server[/i]:
+
+[list][*]There are several add-ons for early versions of Wesnoth (up through 1.3) that were uploaded to the old wolff.to server that have been lost. (I am, however, compiling a list of these lost add-ons from Internet Archive crawls of the wolff.to site.)
+[*]Some add-ons have been self-deleted by authors with second thoughts (e.g., 1.6's [url=http://forums.wesnoth.org/viewtopic.php?f=8&t=25962&start=45#p417635]Insane_Hermit[/url], though it is still [url=http://forums.wesnoth.org/viewtopic.php?f=21&t=26152&start=45]on the forum[/url]).
+[*]Administrators have removed add-ons over copyright concerns (e.g., [url=http://forums.wesnoth.org/viewtopic.php?f=8&t=10209#p140678]War Stars[/url]) or other issues (e.g., [url=http://forums.wesnoth.org/viewtopic.php?f=8&t=15663#p223015]Theifs campain[/url]).
+[*]At least one server crash [url=http://forums.wesnoth.org/viewtopic.php?f=6&t=17336]wiped out several add-ons[/url] for 1.3.
+[*]Then there are projects that haven't made it off [url=http://wesnoth-umc-dev.ai0867.net/umcreg/index.cgi#addons]UMC-Dev[/url], or were only posted in the forums (e.g., [url=http://forums.wesnoth.org/viewtopic.php?f=8&t=26765]Adelasia[/url]). Others may be scattered on personal websites (e.g., [url=http://cedricduval.free.fr/wesnoth/]The Quest of Khreonas[/url]), github repositories, or so forth.[/list]
+
+[b]Second[/b], my list has been drawn up by checking old filenames against recent ones, a method that has the following weak points:
+
+[list][*] Some old add-ons (particularly those with fairly generic filenames) may be missed because they have the same filename as an unrelated newer add-on. (For example, both Chess.tar.bz2 and The_Fall_of_Wesnoth.tar.bz2 for 1.6 don't appear to be the same add-ons as Chess and The_Fall_of_Wesnoth for 1.9.)
+
+[*] When add-ons are renamed (e.g., Fly_From_Fighting -> Up_From_Slavery), the earlier version(s) will be wrongly identified as unported, since the names no longer match. I've tried to catch these changes, but I may have missed some.
+
+[*] Note that even a minor change in name will prevent an exact match. While I've checked for capitalization differences (e.g., Brotherhood_Of_Light -> Brotherhood_of_Light), there is no way to check for all name variations (e.g., The_North_Wind -> North_Wind, Orocia_RandomMod -> Orocia_RandomMod14 -> Orocia_RandomMod14TMP -> OrociaRandomMod).
+
+[*] Also, when it comes to maps or resources, filename-comparison will not reveal if they were later rolled into a larger pack.[/list]
+
+[b]Lastly[/b], although this won't affect the comprehensiveness of the lists in my attachment, which cover add-ons of all types, this list in the forum may be incomplete because I didn't realize that an add-on was a campaign:
+
+[list][*]Before 1.5.1, uploaders weren't asked to categorize their add-on. Although I tried to scarf down anything that looked like it might be a single-player-campaign, I may have missed some. For example, I presumed that 1.0's survival.tar.bz2 was another multiplayer survival map; if fact, it is a campaign about a village "surviving" in the harsh Northlands.
+
+[*]Some uploaders misclassify their add-ons. The_History_of_Burin is wrongly classified as a scenario, and if there are other such campaigns, I missed them. (Others misclassify scenarios as campaigns; I still included them above while noting the problem.)
+
+[*]Era and faction designers may include a sample campaign, rather than splitting it off (e.g., Dark_Elves and its "A New Threat"); I am now seeking to include these above.
+
+[*]Also, campaigns with both single- and multiplayer modes have to be slotted into one type or the other; I include MP campaigns if I'm aware that it has a single-player mode. [/list][/section]
+
+[b]What's in my attachment?[/b]
+[list][*]HTML files that list all unported add-ons of all types, based on the lists available from addons.wesnoth.org. I've enhanced these with my estimated scenario count and noted which past Wesnoth versions also had releases. (The scenario count does not work for MP campaigns, because they don't use the [scenario] tag.)
+[*]Script used to hack together these lists.
+[*]My new August version now adds a list of the current add-ons (1.9/1.10, /trunk) with the scenario and version counts, as I thought some people might be interested in this information for current UMC.
+[*]I also include a list I am drawing up of lost UMC that used to be on the old wolff.to server.
+[*]My October version adds a list of add-ons that have been deleted from the server, based on past listings saved by archive.org and myself.
+[*]December is a bit of a half-baked update, as I rushed to get it done before a Wesbreak. The past version tracking is a bit buggy with 1.11 add-ons, scenario count not included for latest campaigns. But I finally remembered to include my file that keeps track of renamings.[/list]
+
+
+
+[b][size=120]Version .01: INCOMPLETE[/size][/b]
+
+My apologies for dumping an unfinished guide on the forum. However, starting later this month, I expect to be taking an extended break from the forum. Given that I may not be able to complete this guide before the break, and that it already offers some useful information (I hope), I am posting it immediately. I will try to work on it some more before my break.
+
+[b][size=180]Porting Early UMC: A Guide[/size][/b]
+
+From time to time, I've alluded to the fact that I've been working on a guide to porting. As I continue plugging away on the larger work, I'd like to break out one section, explaining the extra steps involved in porting early add-ons (Wesnoth 1.0 and 1.2).
+
+[b][size=120]CAVEATS[/size][/b]
+
+I have never done a full conversion of an early campaign myself. Instead, this guide is based on my deep study of Wesnoth's user-made content (UMC). Looking at multiple campaigns, I am able to spot recurring patterns and problems.
+
+I don't deny that someone who has actually done an early port might be able to offer better, more practical advice. However, as far as I know, no one who has done so has documented their process.
+
+(For example, while doing some last-minute checking for this post, I realized that I'd never used wmllint 1.4 with the --oldversion switch, because the current wmllint no longer has it. Boy, will there be egg on my face if that gets rid of some of the wmllint crashes and errors I talk about!)
+
+I should also warn that (at least at this stage) these instructions do not really provide enough detail to help someone who doesn't know what Python is, has never used a command line, and so forth. They would be helpful mainly to those who already know how to use wmllint to port more recent add-ons, but could use more information about the additional complications of porting old UMC.
+
+[b][size=120]DOWNLOADING WMLLINT 1.4[/size][/b]
+
+Porting early add-ons takes a little more effort, not just because the code is older, but because Wesnoth's main conversion tool, wmllint, has dropped support for converting 1.0 and 1.2 add-ons. Instead, you first have to run the add-on through wmllint for 1.4, to upgrade it to 1.4. This "1.4" version of the add-on can then be run through the rest of the conversion process.
+
+But don't rush off and download a full copy of Wesnoth 1.4! You can download the old wmllint alone from the [url=http://svn.gna.org/viewcvs/*checkout*/wesnoth/branches/1.4/data/tools/wmllint]gna.org SVN repository[/url].
+
+You should then put the old wmllint in Wesnoth's data/tools directory, renaming it so that it doesn't conflict with the current wmllint. (Although wmllint will not work as a standalone file, it can use the current versions of the other files it relies on.)
+
+[b][size=120]MODIFYING WMLLINT 1.4[/size][/b]
+
+Just as I recommend that porters make certain modifications to the current wmllint, so too I recommend modifying the old wmllint. Due to the changes between versions, however, a different set of mods is called for.
+
+These are possible wmllint mods:
+
+[list][*] [b]comment out lines 1178 and 1191[/b]
+
+[code] assert female_end != -1[/code]
+[code] assert male_end != -1[/code]
+
+Many 1.2 unit files will crash wmllint, and the tracebacks point to these two lines. Lacking Python knowledge, I don't know what these two lines do (or were meant to do). After commenting them out, however, wmllint no longer barfs on those files, while still apparently doing everything it was doing before with the other files.
+
+The "assert male_end" error crashes files with gender=male, or no gender= key (thus defaulting to male). The "assert female_end" error is the female counterpart, and is the traceback that comes up for units with both genders.
+
+It is possible that there was an effort to solve this problem, because line 1052 has this comment:
+
+[code] # Wrap this in try/except because some newer animation syntax chokes it.[/code]
+
+However, if this was the problem they were trying to solve, it obviously didn't work.
+
+[*] [b]update portraits/core image paths[/b]
+
+This is something I definitely think you should insert into wmllint, the only question is whether to do it to the current wmllint or the 1.4 version.
+
+At one time, Wesnoth organized portraits in the format, "portraits/Artist_Name/race-unit.png". In 1.5.9, this was changed to the current file structure, "portraits/race/unit.png", and code added to wmllint to update these old paths.
+
+Back in the 1.0 days, however, Wesnoth's portrait directories were named "portraits/core/Artist_Name/". But wmllint has never removed "core/" from paths, perhaps because the changeover had already been made by the time ESR joined Wesnoth development. Nevertheless, many 1.2 campaigns still have the old "portraits/core" filepaths.
+
+However, the 1.6 port of Invasion of Arendia (in which some pretty hoary code has survived) is the only campaign above 1.2 that I'm aware of that still uses portraits/core. So by making the substitution in wmllint 1.4, you avoid the overhead of running a command on later UMC that doesn't need it. You also don't have to remember to insert this into wmllint again as you move from one Wesnoth version to another (say, 1.10 to 1.11 or 1.12).
+
+On the other hand, there is no real need to solve the portraits/core issue at the 1.4 level, unless for some godawful reason you were looking to port an add-on to play on 1.4. By adding it to the current wmllint, you insure against the possibility that there is another stray add-on using portraits/core. (I should note that I have not really looked at multiplayer add-ons.)
+
+For wmllint 1.4, add this line to one of the sections within "filemoves = {" (line 80). The list in the "older:" section (lines 92-208) is an appropriate place. [b][size=115]Note:[/size] if you do this, you will have to increment future line number references in this guide by one.[/b]
+
+[code] ("portraits/core", "portraits"),[/code]
+
+[*] [b]comment out the mask exit[/b]
+
+If wmllint encounters a mask file that does not end with the .mask extension, it will terminate abruptly and exit with a so-called "fatal error." I've advocated that wmllint simply drop the mask exit as unnecessary harassment, and I recommend that porters comment it out of the current wmllint.
+
+However, as far as I know there actually aren't any unported early campaigns with "bad" mask files (though again, I have not been looking much at non-campaign add-ons). Given this issue's apparent irrelevance to old UMC, and that my more detailed thoughts can be [url=http://forums.wesnoth.org/viewtopic.php?f=12&t=37786#p541767]found elsewhere[/url], I won't belabor the point further.
+
+If you would still like to comment out the mask exit as a precaution, it is line 1617 (make sure it is the correct sys.exit(1)).
+
+[code] sys.exit(1)[/code][/list]
+
+[b][size=120]STARTING OUT[/size][/b]
+
+[b]unfinished section - notes for pre-wmllint checks[/b]
+
+spaces in folder/file names
+Windows backslashes in paths
+userdata/
+non-UTF-8 encoding
+
+AMLA TOUGH
+
+[b]more unfinished[/b]
+
+[b][size=120]WMLLINT CRASHES[/size][/b]
+
+If wmllint crashes, here is an interpretation of some of the tracebacks:
+
+[code] File "tools/wmllint", line 1191, in hack_syntax
+    assert male_end != -1
+AssertionError
+
+  File "tools/wmllint", line 1178, in hack_syntax
+    assert female_end != -1
+AssertionError[/code]
+
+If you are getting these errors, you didn't take my advice to comment out these lines (see above).
+
+[code] File "tools/wmllint", line 1277, in hack_syntax
+    assert attackname != None
+AssertionError[/code]
+
+Commenting out this line doesn't work; it'll just move the crash a few lines down. The cause can be found in a comment a few lines up, in lines 1259-60:
+
+[code] # Note: This assumes that the frame sequence goes last in the [attack] WML
+    # with nothing after it, and will fail if that is not true.[/code]
+
+This appears to be the problem. Move any lines in [attack] that come after the [frame] sequence(s) to the top, so that they come before [frame].
+
+[code] File "tools/wmllint", line 678, in sanity_check
+    assert(unit_id)
+AssertionError[/code]
+
+[b]unfinished[/b]
+
+[b]unfinished - notes for post-wmllint checks[/b]
+
+_main.cfg
+map
+binary path
+external binary path
+old {UNIT} to {NAMED_LOYAL_UNIT}
+
+
+
+
+
+
+With a new development cycle underway, I have been thinking about what new debugging capabilities can be added to wmllint this time around. Here are some suggestions I believe would enhance and improve wmllint.
+
+I am not a programmer and I don't know Python, so I can't submit patches myself. In the meantime, I am using shell commands to accomplish many of the things I am proposing to enable wmllint to do. I am including them here, in case some people find them useful for 1.10 (or if these features aren't added to wmllint at all). Of course, I'm limited by my amateur knowledge, and I'm sure real programmers will see better ways of doing many of these things.
+
+[b]1 Convert old UMC paths from data/campaigns to data/add-ons[/b]
+
+Since the outdated binary path was perhaps the most bedeviling bug I encountered during my first port (Prudence 1.6 to 1.8), trying to figure out why that custom unit's sprite wouldn't show up, this feature is dear to my heart. I already brought this up once before, when I spotted non-working code in wmllint that seemed to be aimed at doing this, but I didn't know Python well enough to realize that it was deliberately neutered, not buggy (aside from referring to the directory as add_ons instead of add-ons).
+
+The reason this feature hasn't been activated is that it would "clobber mainline" campaigns, which still use the data/campaigns path. But even if wmllint isn't going to alter the paths, it could give a warning like, "Path may need hand fixup from data/campaigns to data/add-ons," even if this goes against the ethos that mainline campaigns shouldn't give off any error messages.
+
+However, I think it is possible to make wmllint update UMC paths, while still being safe for mainline. First, you would define a list of mainline campaigns, just as there is a list of the standard usage classes. Based on the format of other variables, it would look something like the code below. When wmllint encounted a data/campaigns/ path, it would then check against the list of mainline campaigns. If it did not match, wmllint would convert the path; if it did, it would skip it.
+
+[code]mainline = ("An_Orcish_Incursion",
+            "Delfadors_Memoirs",
+            "Descent_Into_Darkness",
+            "Eastern_Invasion",
+            "Heir_To_The_Throne",
+            "Legend_of_Wesmere",
+            "Liberty",
+            "Northern_Rebirth",
+            "Sceptre_of_Fire",
+            "Son_Of_The_Black_Eye",
+            "The_Hammer_of_Thursagan",
+            "The_Rise_Of_Wesnoth",
+            "The_South_Guard",
+            "tutorial",
+            "Two_Brothers",
+            "Under_the_Burning_Suns",
+            )
+[/code]
+For now, I have my own command-line path fixer that seems to do a thorough and safe job of converting add-on paths. Of course, "EMMELL" could be replaced by any string unusual enough that it is not going to already be occurring in any files.
+
+[code]echo "Enter the path to your Wesnoth directory and hit enter. This path can be relative - \".\" if this terminal is already in the Wesnoth directory, \"..\" if it is one directory deep inside Wesnoth."
+read WESNOTHDIR
+
+## Eliminate trailing slash, if any
+WESNOTHDIR=$(echo $WESNOTHDIR | sed 's;/$;;')
+
+echo "Enter the path to your userdata directory and hit enter. This path can be relative, and can also accept wildcards (*)."
+read UMCDIR
+
+## Eliminate trailing slash, if any
+UMCDIR=$(echo $UMCDIR | sed 's;/$;;')
+
+ML=$(ls $WESNOTHDIR/data/campaigns) ;
+for AA in $(grep -r "data/campaigns" $UMCDIR | sed ':umc s@\(^[^:]*:\)\([^\v]*\)\(data/campaigns/.*\)@\1\2\v\1\3@ ; t umc' | sed 's/\v/\n/g' | grep "data/campaigns" | grep -v "data/campaigns/$ML" | sed 's/\(^[^:]*\).*/\1/' | grep "\.cfg$" | sort -u ) ; do
+echo "$ML" | sed 's;.*;\\@&@s#/campaigns/&#EMMELL&#g;' | sed \$\ 'a\s;data/campaigns;data/add-ons;g'|sed \$\ 'a\s@EMMELL@/campaigns/@g' | sed -f - -i.back "$UMC" ; done[/code]
+
+(I also presented a command in that earlier post, but I've revised it. First, I found that it's actually faster to 'grep -r' everything rather than filter with 'find -name "*.cfg"', so I switched. Second, the old command operated on all files with the "data/campaigns" string, even if all the paths were for mainline, meaning the net result would be no change. I dislike having my timestamps altered unless there's actually a change, so I've gone to the trouble of making sure to exclude files with only mainline paths. Theoretically, the old command also could have missed a path if there were a line that had both a mainline path and a UMC path; although there doesn't actually appear to be such a case, I've gone to somewhat elaborate lengths to make sure that this command will still work.)
+
+[b]2 Strip userdata/ from paths[/b]
+
+Speaking of paths, some misguided authors put userdata/ in their paths, causing problems not just for non-Windows users, but fellow Windows users who chose to put userdata in My Games. Why not have wmllint remove this mistake?
+
+Meantime, I run this command to delete userdata/ from paths:
+
+[code]read UMCDIR
+## Look at what lines and files will be changed first
+grep -r "^[^#]*userdata/[dac]" $UMCDIR | grep "cfg:"
+## Then act
+grep -rl "^[^#]*userdata/[dac]" $UMCDIR | grep "cfg$" | xargs -d \\n sed ':umc s@^\([^#]*[^./]\)\.\?\.\?/\?user[dat/]*\(data/[ac]\)@\1\2@ ; t umc' -i.back[/code]
+
+(In case you're wondering why I don't simply replace "userdata/data/", there's a set of add-ons in 1.4 that use "userdata/campaigns" instead of "userdata/data/campaigns" in their paths.)
+
+A sidenote: my command strips a leading "../", if there is one. From what I can tell, Wesnoth does the same thing whether a path begins with "../" or not; but I can't be certain that "../" is ALWAYS unnecessary. If in fact every instance is purposeless, wmllint could strip that too.
+
+[b]3 Search for undefined #ifdefs[/b]
+
+While taking a look at someone's effort to port Dark_Elves a few weeks back, I ran across a scenario that was using #ifdef MEDIUM instead of NORMAL. This is a common error, and I've also seen designers capitalize only the first letter of a difficulty #ifdef. But actually, wmllint could look for all of an add-on's defines, and check the #ifdefs against them. If it couldn't find a define for a particular ifdef, it could give an error message like "possibly undefined ifdef."
+
+Currently, I have worked out a command to match an add-on's defines and ifdefs (and ifndefs, I almost forgot about them). Then it filters the remaining #ifdefs against the game's built-in defines, and __UNUSED__, which seems to be a standard way of creating a deliberately undefined #ifdef.
+
+This produces results that are probably different from what wmllint would produce, since it only operates on one add-on at a time. If an add-on called on an era or other dependency with additional defines, my command misses them and produces false positives. It also doesn't parse the Wesnoth core, as would typically be done in a wmllint dryrun, meaning for example that ENABLE/DISABLE_[level 4 unit] #ifdefs retained by custom units are considered undefined unless those are included in the _main.cfg's extra_defines. (Whether that's a false positive or not may be a matter of opinion.)
+
+[code]read UMCDIR
+for UMC in $(find $UMCDIR -maxdepth 0 -type d) ; do
+DIF=$(grep -rhs "define.*=\|difficulties.\?=\|#define" $UMC.cfg $UMC | sed -e 's/.*=//' -e 's/"//g' -e 's/.*#define \([^ ]*\).*/\1/' -e 's/ *#.*//' -e 's/[ \t]*//g' -e 's/\[/\\[/' -e 's/\r//'|sed -e ":x N ; s/\n/,/ ; t x" | sed 's/,/\\|/g') ;
+grep -rsn "^[^#]*#ifn\?def" $UMC/* $UMC.cfg| grep -vw "$DIF" | grep -v "#ifn\?def MULTIPLAYER\|#ifn\?def DEBUG_MODE\|#ifn\?def EDITOR\|#ifn\?def WESNOTH_VERSION\|#ifdef __[EOM_]*UNUSED__" | grep -vi "changelog[.cfgtx]*:\|readme[.cfgtx]*:\|\.cfg[-.~]" ; done[/code]
+
+To give some idea of how useful (or not) such a feature would be, I am attaching a list of hits I got from my add-ons collection. I've decided to give the results raw, including known false positives, to enable an honest assessment of benefits versus drawbacks. For instance, I know full well that "#ifdef CAMPAIGN_INVASION_FROM_THE_UNKNOWN_EPISODE_II" isn't really undefined (but coming up with code that wouldn't see that as undefined would be pretty tricky). A large proportion of hits come from apparently deliberately disabled defines in Sceptre of Life, and LSB_COMMENT from Return to Noelren appears to be deliberately undefined, as other examples.
+
+But there are plenty of real hits. Besides the instances of #ifdef MEDIUM that first inspired me, there are attempts at #ifdef MULTIPLAYER that came out as MULITPLAYER (Ooze) or MULTILAYER (Elves and Wose), for example. There is even one minor hit in a mainline campaign scenario (UTBS). There are several wmllint checks that produce false positives yet are considered on balance to be useful, and I think the same would be true here.
+
+[attachment=0]ifdefs.7z[/attachment]
+
+[b]4 orc portraits[/b]
+In 1.8, when Wesnoth transitioned from the five old cartoon-style orcish warlord portraits, the developers only considered three portraits suitable replacements. Thus, in changing references to the five old portraits to the three new, two were doubled up.
+
+By 1.10, new orc portraits were available, but wmllint was not updated. Thus, I suggest modifying wmllint to use some of the new portraits, adding more variety to the portraits used for orcish leaders. Although this mod is too late for the mainline campaigns and other campaigns already converted to 1.8, there are many unported earlier campaigns.
+
+This is one way wmllint could be modified, reflecting my partiality for the grunt-5 and grunt-6 portraits. You could change the particular portraits (and their order) based on your own taste.
+
+[code] # Changes after 1.8rc1
+        ("portraits/orcs/warlord.png", "portraits/orcs/transparent/warlord.png"),
+        ("portraits/orcs/warlord2.png","portraits/orcs/transparent/warlord.png"),
+        ("portraits/orcs/warlord3.png","portraits/orcs/transparent/grunt-2.png"),
+        ("portraits/orcs/warlord4.png","portraits/orcs/transparent/grunt-2.png"),
+        ("portraits/orcs/warlord5.png","portraits/orcs/transparent/grunt-3.png"),
+
+        # Changes after 1.10
+        ("portraits/orcs/warlord.png", "portraits/orcs/transparent/warlord.png"),
+        ("portraits/orcs/warlord2.png","portraits/orcs/transparent/grunt-5.png"),
+        ("portraits/orcs/warlord3.png","portraits/orcs/transparent/grunt-6.png"),
+        ("portraits/orcs/warlord4.png","portraits/orcs/transparent/grunt-2.png"),
+        ("portraits/orcs/warlord5.png","portraits/orcs/transparent/grunt-3.png"),
+[/code]
+
+I have some other suggestions, but I'm still writing them up. That may be for the best, as it gives time for these ideas to be properly digested and considered.
+
+
+
+It would be nice if a rating system for user made content would be included. Right now there are only 4 quality signs.
+
+1. number of downloads (only good for established add-ons but not for upstarts)
+2. size (can be distorted by music and bad graphics)
+3. version number (can be funny numbers)
+4. update date (shows only activity)
+
+They all can be misleading. Why not collect data? If you finish a campaign you get a rating screen. Ask a few simple questions. Give an overall 5 star rating. Publish the rate of how many rating/downloads a campaign is achieving. Mark them as hot or new.
+
+Why not having good information?
