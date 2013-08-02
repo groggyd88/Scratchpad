@@ -1,0 +1,600 @@
+= WMLLINT ERROR MESSAGES =
+
+wmllint is well-known as a handy utility for automatically porting old add-ons to the latest version of Wesnoth, but it is a general WML (Wesnoth Markup Language) validator, helping authors debug possible errors in their WML.
+
+Unfortunately, it is not always apparent to someone new to WML what to do about wmllint's error messages. What do they mean, which are real problems, and which are false alarms? This guide aims to explain these errors, illustrated with real examples.
+
+== STDERR MESSAGES ==
+
+The following are reported to stderr rather than stdout:
+
+* unmatched quotes or tags turned up by wmliterator
+* tracebacks from wmllint crashes
+* system messages from deliberate wmllint exits
+* spellcheck will also report to stderr
+
+==== Tracebacks ====
+
+If wmllint crashes, you will normally get a stderr message, "wmllint: internal error", pointing to the file on which wmllint failed; a traceback of its last three operations, the last one telling you which line of wmllint choked; and the type of error.
+
+It will not tell you which line of WML caused the problem, but since the last line of stdout had to be a successful operation, you can infer that it was ''after'' that.
+
+===== solved tracebacks =====
+
+These are tracebacks that are believed to have been fixed in wmllint. If you are getting one of them, you are probably not using the latest version.
+
+ File "PATH/Battle for Wesnoth 1.8.4/data/tools/wmllint", line 1689, in translator
+ outmap = [outmap[0]] + outmap + [outmap[-1]]
+ IndexError: list index out of range
+
+   File "tools/wmllint", line 1178, in hack_syntax
+     assert female_end != -1
+ AssertionError
+
+   File "tools/wmllint", line 1191, in hack_syntax
+     assert male_end != -1
+ AssertionError
+
+==== Spellcheck ====
+By default, wmllint will try to run a spellcheck after inspecting your files, unless suppressed by the -S or --nospellcheck option. This relies on python-enchant; if it is not installed, you will get a stderr message to "install python-enchant to enable".
+
+If spellcheck does run, the suspected misspellings will also be outputted to stderr rather than stdout.
+
+[[Category:Wmllint]]
+
+
+The Wesnoth source code distribution includes a couple of tools intended to help authors maintain campaigns, faction & unit packs, and other WML resources. These
+are:
+ 
+; wmlscope: a cross-reference lister, useful for finding unresolved macro and resource-file references.
+
+; wmllint: a utility for sanity-checking WML syntax and porting your old WML to the current version of WML.  
+
+; wmlindent: a utility for reindenting WML to a uniform style.
+
+You will need a Python 2 interpreter on your system to use these tools.  Linux, *BSD, and Mac OS/X should already have Python 2 installed; for Windows it's a free download
+from http://www.python.org.  You will also need to know how to run command-line tools on your system.
+
+All three tools will require you to supply a <i>directory list</i>.  This is a set of directories containing the WML files you want to work on.
+
+This page is intended as ducementation for users.  A developer's-eye discussion of the design constraints on these tools, and their limitations, can be found here [https://mail.gna.org/public/wesnoth-dev/2010-02/msg00078.html].
+
+<u>Note to Windows Users:</u> This means you have to run it from the '''Command Line'''. The command line may be reached by hitting Start, then Run, then "cmd" or "command" depending on your version of Windows.
+
+Example uses:
+ python wmllint path\to\files
+ python wmlindent path\to\files
+
+Another example:
+ "C:\Program Files\Python2.4\python.exe" data\tools\wmllint --dryrun data\core data\{multiplayer,themes} data\campaigns 
+(You have to specify the full directory path to the executable if you don't have your environment variables set up correctly).
+The first thing you type is the path to your python executable, followed by a space. The second thing you type is the path to the desired script to run, followed by a space. The third thing you type is the path to the folder (or file) to be processed.
+
+
+'''A convenient way of running wmllint''' on Linux (Debian Lenny) and Windows (Xp) in comparison, '''Linux''':
+ python2 /usr/share/games/wesnoth/data/tools/wmllint --dryrun /usr/share/games/wesnoth/data/core ~/.wesnoth1.7/data/add-ons/A_Simple_Campaign 1>wmllint-run.log 2>wmllint-err.log
+I have these commands inside of a file named
+ wmllint_dryrun_ASC.sh
+and execute it by opening a shell (=terminal, console, command window, bash,...), navigating into the directory with that file and typing
+ bash wmllint_dryrun_ASC.sh
+The python2 command should be automatically known on Debian. The path to the script tells the python interpreter what to execute. --dryrun: A wmllint option, see below. The path to the core files is needed to let wmllint know about e.g. defined core units, followed by the path to the add-on that shall be checked; the last two commands cause the result of the wmllint usage to be written into those files in the same directory as the script.
+'''Windows''', this is logically exactly the same as the Linux shell script above, so if you are on a Mac you can probably conclude how you need to adapt the paths:
+ E:\Python26\python.exe E:\Programme\Wesnoth_1.8_svn\data\tools\wmllint --dryrun E:\Programme\Wesnoth_1.8_svn\data\core E:\Programme\Wesnoth_1.8_svn\userdata\data\add-ons\A_Simple_Campaign 1>wmllint-run.log 2>wmllint-err.log
+This is the content of a .txt file, whose extension I rename to .bat and double-click onto it. Opening a command window is not needed this way.
+Since python isn't natively installed on windows and I don't have environment variables set, the full path to python.exe is given. If your directories contain spaces it may help to include the path in quotes:
+ "C:\Programs\Battle for Wesnoth 1.8\data\tools\wmllint"
+Remember that you do not need to enter all of the commands/paths at once. If it doesn't work, start with only "python" or "C:\Python26\python.exe" or the like and interpret the error messages that you get. If you get an "unknown command", python isn't installed or environment variables aren't set correctly. After that, you can add the later commands one by one.
+
+== wmlscope ==
+
+The main use for <tt>wmlscope</tt> is to find WML macro references without definitions and references to resource files (sounds and images) that don't exist.  These are difficult to spot from in-game because they usually result in silence or a missing image rather than actual broken game logic.  They may happen because of typos in your WML, or because the name of a macro or the location of a resource file changed between versions of the game.
+
+<tt>wmlscope</tt> also checks macro invocations for consistency.  It will complain
+if a macro is called with the wrong number of arguments.  In most cases it can deduce information about the type of the literal expected to be passed to a given macro argument by looking at the name of the formal.
+
+<table border="1"><tr>
+<th>Type</th>
+<th>Meanining</th>
+<th>Formals requiring this type</th>
+<th>Literals of this type</th>
+</tr>
+<tr>
+<td>side</td>
+<td>a single side number</td>
+<td>SIDE, *_SIDE, SIDE[0-9]</td>
+<td>a numeric or "global"</td>
+</tr>
+<tr>
+<td>numeric</td>
+<td>a numeric integer literal</td>
+<td>SIDE, X, Y, RED, GREEN, BLUE, TURN, PROB, LAYER, TIME, *_SIDE, *NUMBER, *AMOUNT, *COST, *RADIUS, *_X, *_Y, *_INCREMENT, *_FACTOR, *_TIME, *_SIZE, DURATION</td>
+<td>\-?[0-9]+</td>
+</tr>
+<tr>
+<td>percentage</td>
+<td>a percentage</td>
+<td>*PERCENTAGE</td>
+<td>a numeric or 0\.[0-9]+</td>
+</tr>
+<tr>
+<td>position</td>
+<td>a single x,y coordinate</td>
+<td>POSITION, *_POSITION, BASE</td>
+<td>-?[0-9]+,-?[0-9]+</td>
+</tr>
+<tr>
+<td>span</td>
+<td>a set of coordinates or coordinate ranges</td>
+<td>*_SPAN</td>
+<td>a numeric, position or ([0-9]+\-[0-9]+,?|[0-9]+,?)+</td>
+</tr>
+<tr>
+<td>alliance</td>
+<td>a set of side numbers</td>
+<td>SIDES, *_SIDES</td>
+<td>a span, or the empty string</td>
+</tr>
+<tr>
+<td>range</td>
+<td>an attack range</td>
+<td>RANGE</td>
+<td>"melee" or "ranged"</td>
+</tr>
+<tr>
+<td>alignment</td>
+<td>an alignment keyword</td>
+<td>ALIGN</td>
+<td>"lawful" or "neutral" or "chaotic"</td>
+</tr>
+<tr>
+<td>types</td>
+<td>a set of unit types</td>
+<td>TYPES</td>
+<td>a shortname, name, or anything that contains spaces and matches no other type</td>
+</tr>
+<tr>
+<td>terrain_pattern</td>
+<td>a set of terrain codes to filter</td>
+<td>ADJACENT*, TERRAINLIST*, *TERRAIN_PATTERN, RESTRICTING</td>
+<td>a terrain_code or name</td>
+</tr>
+<tr>
+<td>terrain_code</td>
+<td>a single terrain code, perhaps with overlay</td>
+<td>TERRAIN*, *TERRAIN</td>
+<td>a shortname or (\*|[A-Z][a-z]+)\^([A-Z][a-z\\|/]+\Z)?</td>
+</tr>
+<tr>
+<td>shortname</td>
+<td>a terrain code or a short, capitalized variable name</td>
+<td></td>
+<td>[A-Z][a-z][a-z]?</td>
+<tr>
+<td>name</td>
+<td>a name or identifier</td>
+<td>NAME, VAR, IMAGESTEM, ID, FLAG, *_NAME, *_ID, NAMESPACE, BUILDER, *_VAR</td>
+<td>anything without spaces that matches no other type</td>
+</tr>
+<tr>
+<td>optional_string</td>
+<td>a string value (may be empty)</td>
+<td>ID_STRING, NAME_STRING, DESCRIPTION, IPF</td>
+<td>a string, or the empty string</td>
+</tr>
+<tr>
+<td>string</td>
+<td>a nonempty string not matching any of the preceding types</td>
+<td>STRING, TYPE, TEXT, *_STRING, *_TYPE, *_TEXT</td>
+<td>a shortname, a name, a stringliteral, or anything that contains spaces and matches no other type</td>
+</tr>
+<tr>
+<td>stringliteral</td>
+<td>a string in doublequotes or a translated string</td>
+<td></td>
+<td>".*" or _.* but not _[a-z].*</td>
+</tr>
+<tr>
+<td>image</td>
+<td>an image path, perhaps with [[ImagePathFunctionWML|image path functions]]</td>
+<td>*IMAGE, PROFILE</td>
+<td>[A-Za-z0-9{}.][A-Za-z0-9_/+{}.-]*\.(png|jpg)(?=(~.*)?)</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>a music or sound filename</td>
+<td>MUSIC, SOUND</td>
+<td>string ending with ".wav" or ".ogg"</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>[[FilterWML|WML filter]]</td>
+<td>FILTER</td>
+<td>any non-quoted string containing "="</td>
+</tr>
+<tr>
+<td>WML</td>
+<td>arbitrary WML fragment</td>
+<td>WML, *_WML</td>
+<td>any non-quoted string containing "=", or the empty string</td>
+</tr>
+<tr>
+<td>affix</td>
+<td>a prefix, suffix, or infix for a variable name</td>
+<td>AFFIX, *AFFIX, POSTFIX, ROTATION</td>
+<td>a shortname or name, or the empty string</td>
+</tr>
+<tr>
+<td>any</td>
+<td>anything</td>
+<td>*VALUE, [ARS][0-9]</td>
+<td>anything</td>
+</tr>
+</table>
+
+If the actual argument is a macro call {.*}, then it matches any formal  Otherwise, if the formal has an identifiable type, <tt>wmlscope</tt> will complain if the actual literal does not match it.
+
+The argument type check only works in macro calls that fit on a single line.
+
+<tt>wmlscope</tt> has many options for changing the reports it generates; the more advanced ones are intended for Wesnoth developers.  Invocations for the most commonly useful reports it generates are included in <i>data/tools/Makefile</i> of the source distribution. Here are some of those reports:
+
+; make unresolved: Report on unresolved macro calls and resource references; also report macro argument-type mismatches.  (This is what you are most likely to want to do). 
+
+; make all: Report all macro and resource file references, not just unresolved ones.
+
+; make collisions: Report on duplicate resource files.
+
+For more advanced users, or those who want to understand what the canned Makefile invocations are doing, here is a summary of <tt>wmlscope</tt>'s options. Some of the more advanced options will require you to understand 
+[http://docs.python.org/lib/re-syntax.html Python regular expressions].
+
+; -h, --help:                 Emit a help message and quit
+; -c, --crossreference:       Report resolved macro references (implies -w 1)
+; -C, --collisions:           Report duplicate resource files   
+; -d, --deflist:              Make definition list.  (This one is for campaign server maintainers.)
+; -e <i>regexp</i>, --exclude <i>regexp</i>:   Ignore files matching the specified regular expression. 
+; -f <i>dir</i>, --from <i>dir</i>:         Report only on macros defined under <i>dir</i>
+; -l, --listfiles:            List files that will be processed
+; -r <i>ddd</i>, --refcount=<i>ddd</i>:     Report only on macros with references in exactly <i>ddd</i> files.
+; -u, --unresolved:           Report unresolved macro references
+; -w, --warnlevel:            Set to 1 to warn of duplicate macro definitions
+; --force-used reg:          Ignore reference count 0 on names matching regexp
+; --extracthelp:              Extract help from macro definition comments.
+
+== wmllint ==
+
+<tt>wmllint</tt> is a tool for migrating your WML to the current version.  It handles two problems: 
+
+* Resource files and macro names may change between versions of the game. <tt>wmllint</tt> knows about these changes and will tweak your WML to fit where it can.
+
+* Between 1.2.x and 1.3.1 the terrain-coding system used in map files underwent a major change. It changed again in a minor way between 1.3.1 and 1.3.2.  <tt>wmllint</tt> will translate your maps for you, unless you use custom terrains in which case you will have to do it by hand.
+
+<tt>wmllint</tt> also performs various sanity-checking operations, reporting:
+
+* unbalanced tags
+* strings that need a translation mark and do not have them
+* strings that have a translation mark and should not
+* translatable strings containing macro references 
+* filter references by description= (id= in 1.5) not matched by an actual unit
+* abilities or traits without matching special notes, or vice-versa
+* consistency between recruit= and recruitment_pattern= instances
+* double space after punctuation in translatable strings.
+* unknown races or movement types in units
+
+<tt>wmllint</tt> takes a directory-path argument specifying the WML directories to work on.  It will modify any cfg and map files under those directories that need to be changed.  Here is a summary of its options:
+
+; -h, --help:                 Emit a help message and quit.
+; -d, --dryrun:               List changes but don't perform them.
+; -v, --verbose:              Set verbosity; more details below.
+; -c, --clean:                Clean up -bak files.
+; -D, --diff:                 Show diffs between unconverted and unconverted files.
+; -r, --revert:               Revert the conversion from the -bak files.
+; -n, --nolift:               Suppress lifting, do sanity checks only 
+
+The verbosity option works like this:
+
+; -v:          lists changes.
+; -v -v:       warns of maps already converted.
+; -v -v -v:    names each file before it's processed.
+; -v -v -v -v: shows verbose parse details (developers only).
+
+The recommended procedure is this:
+
+# Run it with --dryrun first to see what it will do.
+# If the messages look good, run without --dryrun; the old content will be left in backup files with a -bak extension.
+# Eyeball the changes with the --diff option.
+# Use wmlscope, with a directory path including the Wesnoth mainline WML, to check that you have no unresolved references.
+# Test the conversion.
+# Use either --clean to remove the -bak files or --revert to undo the conversion.
+
+Additionally, wmllint tries to locate a spell checker on your system and spell-checks storyline and message strings.  It will work automatically with either aspell, myspell, or ispell provided you have the <tt>enchant.py</tt> Python library installed.
+
+== wmlindent ==
+
+Call with no arguments to filter WML on standard input to reindented WML on
+standard output.  If arguments are specified, they are taken to be files to be
+re-indented in place; interrupting will be safe, as each reindenting
+will be done to a copy that is atomically renamed when it's done. This
+code never modifies anything but blank lines and leading and trailing whitespace on non-blank lines.
+
+The indent unit is four spaces.  Absence of an option to change this is
+deliberate; the purpose of this tool is to prevent style wars, not encourage
+them.
+
+If you don't apply this tool to your own WML, the mainline-campaign maintainers 
+will do it when and if your code is accepted into the tree.
+
+Note: This tool does not include a parser.  It will produce bad results on WML
+that is syntactically unbalanced.  Unbalanced double quotes that aren't part
+of a multiline literal will also confuse it.  You will receive warnings
+if there's an indent open at end of file or if a closer occurs with
+indent already zero; these two conditions strongly suggest unbalanced WML.
+
+[[Category:Create]]
+[[Category:Tools]]
+
+
+
+mail[Wesnoth-dev] The limitations of wmlscope and wmllint
+
+Others Months | Index by Date | Thread Index
+>>   [Date Prev] [Date Next] [Thread Prev] [Thread Next]
+Header
+
+    To: wesnoth-dev@xxxxxxx
+    Date: Mon, 22 Feb 2010 16:12:30 -0500 (EST)
+    Message-id: <20100222211230.A16C120CAB6@snark.thyrsus.com>
+
+
+Content
+Posted by Eric Raymond on February 22, 2010 - 22:12:
+
+When I joined the Wesnoth project about two years ago, we shipped a
+total of 6 campaigns.  1.8 will ship 13, and the addition of two more
+is planned for 1.9.  Yet the percentage of developer time devoted to
+pure-WML bugs, and the rate at which new ones are posted to the
+tracker, has actually dropped. The defect density of the WML we ship
+has gone way down.
+
+There's no mystery about why this is.  My first major project for
+Wesnoth was to write a pair of validation tools that capture a large
+range of WML errors that previously had to be noticed by human
+eyeballs, but too often weren't.  I wrote these tools in a direct bid
+to reduce the maintainance overhead incurred by mainlining new
+campaigns, and the numbers tell us that bid has succeeded handsomely.
+
+As a side effect, modifying the syntax and semantics
+of WML now has a much lower overhead than it used to, because
+my tools automate dialect lifting.  This capability has been
+very important in enabling the 1.4 map-format changeover and at least one
+rewrite of the animation system.
+
+With these tools, however, come certain limitations and problems. Some
+of our devs (notably shadowmaster and fendrin) find the limitations
+rather chafing and have, in effect, walled off a lot of their WML code
+so my tools won't emit a lot of warnings they consider spurious.
+I am not pointing this out to criticize them, but this practice does
+increase the risks and downstream maintainance burden of their WML.
+
+My goal in this mail is to explain how these tools work, why they have
+the limitations they do, and to suggest a way forward that might lift
+some of the limitations. 
+
+If this explanation accomplishes nothing else, I hope it will ease
+some frustration by making clear that the limitations of these tools
+are not arbitrary or the result of laziness; they were designed under
+constraints that are much, *much* more difficult than is obvious from
+a casual look. Ideally, better undertanding of these tools will lead
+to creative suggestions for improving them.
+
+The central problem these tools have to cope with is the
+existence of macros.  To see why, consider the difference between
+these two pieces of WML:
+
+Example 1: A unit declaration in macro-less style
+----------------------------------------------------------------
+[unit]
+    id = Grunnj
+    name = _"Grunnj"
+    type = Orcish Warlord
+    side = 2
+    x,y = 17, 23
+    random_traits=yes
+    random_gender=yes
+    upkeep=full
+[/unit]
+----------------------------------------------------------------
+
+This first version gives an validation tool a lot to work with.  You can
+look at the "type" attribute inside [unit] for example, and check that
+it's in the list of known unit types.  There are actually at least
+ten soundness checks you can run on this declaration, each one of
+which will catch a typo or usage error that hapless WML authors
+actually make and most of which result in silent failures that
+aren't easy to detect.  Ensuring that the WML we ship never 
+has those errors is a huge win.
+
+Example 2: The same unit declaration using a standard macro
+----------------------------------------------------------------
+{NAMED_GENERIC_UNIT 2 (Orcish Warlord) 17 23 Grunnj (_"Grunnj")}
+----------------------------------------------------------------
+
+Now our validator is looking at a macro.  It expands to the
+above [unit] declaration, but as presented all the attribute
+information that makes good validation checks possible is *gone*. 
+
+Macros stick validation tools with a painful choice.  If they audit
+WML before macroexpansion, the syntactic regularities that make
+careful checking possible just won't be there.  You won't be able to
+tell autiomatically things even as basic as when a macro argument
+string is supposed to be a character name or a unit type.  You can
+also never tell when a missing attribute in a WML declaration
+contining a macro call is an error; the macroexpansion might supply
+it!
+
+Auditing after macroexpansion has its own problems.  One big one is
+how you'd refer line errors in the WML *after* expansion to line
+numbers *before* expansion.  This is why the C preprocessor emits
+#line directives, to correct the notion of "current line number" that
+the compiler sees.  The other is that you'll have lost information
+about whatever formal-to-actual argument mapping any enclosing macro
+did, making generation of useful error messages difficult even if you
+had the line number mapping.  (To see how nasty this could get,
+consider the case where WML is generated by two or more *nested*
+macros.  Think about what you'd have to do to relate the
+post-expansion actuals to the pre-expansion formals.)
+
+This dilemma isn't specific to WML. It's a central reason why modern
+programming languages have abandoned text macro preprocessing.
+
+In an ideal world, we'd audit each piece of WML twice - once
+before expansion, once after.  The pre-expansion pass would be small
+and mostly regexp matching.  The post-expension pass would do a really
+fine-toothed, syntax-enabled set of checks.
+
+Right now, the tools do pre-expansion checks *only*, making heavy use
+of regexps.  This is because when I wrote them there was no convenient
+way to macroexpand WML outside the game itself. Now there's something
+close - ai0867's prototype at data/tools/wesnoth/wmlparser.py.  It's
+incomplete and not well tested.  The handling of nested macro calls is
+probably wrong, and (crucially) it doesn't generate #line directives.
+But if these things were fixed many possibilities would open up.
+
+Now I'll talk about how wmlscope and wmllint actually work.
+
+It's useful to know that the first thing wmlscope does is build an xref
+(cross-reference) object. This contains a list of all locations where an
+image or sound resource is defined, compiled simply by making relative
+path lists from the right subtrees.  It also contains a list of all
+macro definitions and their formal arguments, with the file and line
+number of the definition site.  These lists are relatively easy to get
+provably correct.
+
+Compiling resource definitions by looking at directory listings is
+dirt-simple and very robust, but it has a subtle consequence.  It
+means the shape of the Wesnoth data tree is significant to any tool
+that uses the xref builder. Putting resource files in a place
+that's "wrong" under the xref-builder's assumptions can make them
+invisible to the validation logic even though a suitably constructed
+path in game WML could actually find them.
+
+Occasionally I've gotten into minor arguments with zookeeper and
+others because I insisted the data tree had to be shaped a certain
+way.  This is one of the reasons.  One of the costs of not being
+careful about the tree shape would be to make xref compilation *much*
+more complicated and fragile.
+
+On the other side, macro reference are easy to spot by syntax.  But
+the situation with image- and sound-file reference is messier.
+Because of macros, the xref builder can't rely on surrounding
+syntax to know which strings are intended to be references.  So it
+has to use a hack: it looks for .png, .jpg, .ogg, and .wav extensions.
+This mostly works, but has one big bad consequence; it doesn't handle 
+the weird stuff going on in terrain macros at all well. In fact I have
+to tell wmlscope to just ignore that whole subtree.
+
+Another limitation of the xref builder is that it cannot reliably spot
+resource references from C++ code, and doesn't even try.  The problem
+here isn't spotting the C++ calls that grab images and sounds; that
+would be easy, by itself, though prone to breakage when our internal
+APIs change.  No, the problem is that the call arguments can be C++
+*expressions* that (among other things) may use constants far from the
+call site.  You'd need to run most of a C++ compiler just to compute
+what the actual path arguments are!
+
+Most of the rest of wmlscope (and there isn't that much else) is a
+bunch of small report generators that walk through the cross-reference
+object looking for mismatches, duplicates, and other anomalies.
+
+Viewed from the outside, wmlscope has three main jobs and a couple of
+others that are sideshows.  The three main ones are:
+
+1. Check for references to images and sound files that don't exist
+
+2. Check for references to macros that don't exist.
+
+3. Check that actual arguments to macros have the types expected.
+
+All three of these error types used to be distressingly common in
+mainline, produced by typos and errors of omission that were very
+difficult for humans to spot reliably.  From the description of the
+cross-reference builder, it shouldn't be hard to see how wmlscope nabs
+these errors.
+
+The ugliest part of wmlscope is the macro argument type checking.
+The intent here is to spot misuse of macros because (for example)
+a coordinate pair is passed where a name string is expected.
+
+To accomplish this, wmlscope has three sets of rules. One set maps
+macro formal argument names to types: for example, any name ending
+with the string _AMOUNT is assumed to require a numeric actual value.
+Another set of rules parses actual arguments and assigns each a
+type. For example, a literal enclosed in double quotes gets the actual
+type "string".
+
+A third set of rules controls which actual types are allowed to match
+which formal types.  These rules are messy, complicated, and ad-hoc;
+the best I can say for them is that they beat having no checking at
+all. Another consequence is that the source tree occasionally requires
+a grooming oass to make sure all macro formal arguments conform to
+the tystem.  This can be *lot* of work; my last pass took most of
+three days!
+
+It's worth a reminder at this point what the payoff is. In the parts
+I can check (e.g. not terrain macros), we don't ship broken image or 
+sound or macro references any more. *Ever*.
+
+Now on to wmllint.  It is actually a significantly more complex 
+piece of code than wmlscope, but in some ways easier to describe.
+
+wmllint mixes two functions. One is to do every kind of WML sanity
+check I've been able to think of that a cross-referencer alone won't
+do.  (Mostly I've derived these by watching every WML bug that drifts
+through the tracker, asking myself whether there's an automated check
+possible that would have spotted the problem before it ships.) Unlike
+wmlscope, wmllint is aware of WML syntax.  So, for example, it can
+compile a list of defined unit types and then check ensure type=
+attributes to ensure it matches one of them.
+
+The other thing wmllint does is try to lift obsolete WML syntax to
+equivalent forms.  Nowadays this is mainly significant for importing
+UMC, and the volume of code devoted to this job has shrunk some since
+1.4 (there are, for example, no 1.2-style maps left to convert).
+
+Internally, wmllint is very messy.  Again, the reasons for this
+mostly come down to the existence of macros.  There used to be
+other sources of messiness, but some relatively minor changes to WML
+(such at changing the [unit] syntax for type declaration to
+[unit_type], and regularizing the use of id= attributes so they all
+have consistent semantics) eliminated most of those.
+
+Because of macros, a lot of wmllint checks have to be done with 
+crude regexp-bashing and are prone to both false positives and
+false negatives.  This in turn has required me to implement a
+fairly elaborate system of wmllint pragmas that either suppress
+warnings or supply required meta-information.
+
+Some of the checks can be done with Sapient's wmliterator code,
+which is a WML tree-walker.  Over time I've been trying to move
+as many tests from ad-hoc regexp bashing to using the tree-walker,
+but this work has a particularly deadly combination of traits:
+it is difficult, mind-numbingly boring, and tends to break things.
+
+That's how things are now.  I'll finish by indicating how they
+could be improved.
+
+If I were writing these tools today, I would start from something like
+ai0867's macroexpander and do mostly syntax-driven checking on a
+macroexpanded tree.  The pre-expansion pass would do only
+definition-checking of macros. Many of the present problems and weird,
+ad-hoc checks could be eliminated under this approach.  But it would
+*absolutely* require that the macroexpander be fast, bulletproof, and
+emit #line directives so that error locations could be referred back
+to the unexpanded sources.
+-- 
+                <a href="http://www.catb.org/~esr/";>Eric S. Raymond</a>
+
+"Today, we need a nation of Minutemen, citizens who are not only prepared to
+take arms, but citizens who regard the preservation of freedom as the basic
+purpose of their daily life and who are willing to consciously work and
+sacrifice for that freedom."    -- John F. Kennedy
+
+
